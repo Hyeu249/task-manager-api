@@ -1,7 +1,7 @@
 const { ObjectID } = require("bson");
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 5555;
+const port = process.env.PORT;
 require("./db/mongoose");
 const taskRouter = require("./router/task");
 const userRouter = require("./router/user");
