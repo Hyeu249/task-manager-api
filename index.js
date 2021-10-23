@@ -14,7 +14,7 @@ app.use(taskRouter);
 app.use(userRouter);
 
 app.use("/", (req, res) => {
-  res.send({ name: "BaoiIeu", age: 25 });
+  res.status(200).send({ name: "BaoiIeu", age: 25 });
 });
 
 //Start up server
