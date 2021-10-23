@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(taskRouter);
 app.use(userRouter);
 
-app.use("", (req, res) => {
+app.use("/", (req, res) => {
   res.send("Hello BaoHieu💎");
 });
 
