@@ -5,6 +5,7 @@ const port = process.env.PORT;
 require("./db/mongoose");
 const taskRouter = require("./router/task");
 const userRouter = require("./router/user");
+const ACAO = require("./middleware/ACAO");
 
 //parse imcoming JSON
 app.use(express.json());
@@ -13,8 +14,8 @@ app.use(express.json());
 app.use(taskRouter);
 app.use(userRouter);
 
-app.use("/", (req, res) => {
-  res.status(200).send({ name: "BaoiIeu", age: 25 });
+app.use("", (req, res) => {
+  res.status(200).send({ name: "BaoHieu", age: 25 });
 });
 
 //Start up server
