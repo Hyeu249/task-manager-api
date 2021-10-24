@@ -1,11 +1,14 @@
 const { ObjectID } = require("bson");
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const port = process.env.PORT;
 require("./db/mongoose");
 const taskRouter = require("./router/task");
 const userRouter = require("./router/user");
-const ACAO = require("./middleware/ACAO");
+
+//use CORS
+app.use(cors());
 
 //parse imcoming JSON
 app.use(express.json());
@@ -15,7 +18,7 @@ app.use(taskRouter);
 app.use(userRouter);
 
 app.use("", (req, res) => {
-  res.status(200).send({ name: "BaoHieu", age: 25 });
+  res.status(200).send("Xin Chào Bảo Hiếu💎");
 });
 
 //Start up server

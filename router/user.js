@@ -48,7 +48,7 @@ router.post("/user/logoutall", auth, async (req, res) => {
 });
 
 //Create user
-router.post("/user", async (req, res) => {
+router.post("/users", async (req, res) => {
   try {
     const user = await User(req.body);
 
