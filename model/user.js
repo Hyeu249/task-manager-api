@@ -45,6 +45,10 @@ const userSchema = new mongoose.Schema(
         },
       },
     ],
+    _avatar: {
+      type: String,
+      trim: true,
+    },
     avatar: {
       type: Buffer,
     },
