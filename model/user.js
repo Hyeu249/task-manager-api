@@ -22,6 +22,21 @@ const userSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
+    birthDay: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    gender: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    pronoun: {
+      type: String,
+      required: true,
+      trim: true,
+    },
     tokens: [
       {
         token: {
