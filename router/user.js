@@ -65,8 +65,6 @@ router.get("/user/me", auth, async (req, res) => {
   res.send(req.user);
 });
 
-//Update user
-
 router.patch("/user/:id", auth, async (req, res) => {
   const updates = Object.keys(req.body);
   const allowUpdates = ["name", "email", "password", "_avatar"];

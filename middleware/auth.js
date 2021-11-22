@@ -14,7 +14,7 @@ const auth = async function (req, res, next) {
     req.user = user;
     next();
   } catch (err) {
-    res.status(405).send("Failer to authentication💥");
+    res.status(400).send("Failer to authentication💥");
   }
 };
 
