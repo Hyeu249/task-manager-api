@@ -18,7 +18,7 @@ app.use(taskRouter);
 app.use(userRouter);
 
 app.use("", (req, res) => {
-  res.status(200).send("Xin Chào Bảo Hiếu💎");
+  res.status(200).send("auth.status(405)💎");
 });
 
 //Start up server
